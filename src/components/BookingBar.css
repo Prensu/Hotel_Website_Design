@@ -1,0 +1,22 @@
+.booking-bar {
+  display: flex;
+  gap: 10px;
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.booking-bar input {
+  border: none;
+  padding: 10px;
+  outline: none;
+}
+
+.booking-bar button {
+  background: #8b6b4a;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
