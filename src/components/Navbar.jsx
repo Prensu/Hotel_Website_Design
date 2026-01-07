@@ -1,11 +1,10 @@
 import "./Navbar.css";
 
-export default function Navbar() {
+const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="nav-logo">RITZIO</div>
-
-      <ul className="nav-links">
+      {/* Left menu */}
+      <ul className="nav-menu">
         <li>Home</li>
         <li>Our Story</li>
         <li>Room</li>
@@ -13,7 +12,13 @@ export default function Navbar() {
         <li>Contact</li>
       </ul>
 
+      {/* Center logo */}
+      <div className="nav-logo">RITZIO</div>
+
+      {/* Right button (optional) */}
       <button className="nav-btn">Booking Now</button>
     </nav>
   );
-}
+};
+
+export default Navbar;

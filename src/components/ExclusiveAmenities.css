@@ -1,0 +1,105 @@
+.amenities {
+  padding: 90px 6%;
+  background-color: #f6f4f1;
+  font-family: "Georgia", serif;
+  text-align: center;
+}
+
+/* TITLE */
+.amenities-title {
+  font-size: 30x;
+  letter-spacing: 2.5px;
+  color: #9c7b63;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.amenities-subtitle {
+  text-align: center;
+  font-size: 15px;
+  color: #7a6a60;
+  max-width: 620px;
+  margin: 0 auto 55px;
+  line-height: 1.7;
+}
+
+/* GRID */
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 55px;
+}
+
+/* CARD */
+.amenity-card {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 26px 24px;
+  text-align: left;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.amenity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* HEADER (ICON + TITLE INLINE) */
+.amenity-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.amenity-icon {
+  font-size: 18px;
+  color: #6b4b3a;
+}
+
+.amenity-card h3 {
+  font-size: 16px;
+  color: #3e2c22;
+  font-weight: 500;
+}
+
+/* TEXT */
+.amenity-card p {
+  font-size: 13.5px;
+  color: #6f6157;
+  line-height: 1.6;
+}
+
+/* BUTTON */
+.amenities-button {
+  background-color: #6b4b3a;
+  color: #fff;
+  border: none;
+  padding: 14px 30px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.amenities-button:hover {
+  background-color: #54392b;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .amenities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .amenity-card {
+    text-align: center;
+  }
+
+  .amenity-header {
+    justify-content: center;
+  }
+}

@@ -1,47 +1,43 @@
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9999;
-
+  position: relative;              /* REQUIRED for absolute centering */
   display: flex;
   align-items: center;
-  justify-content: space-between;
-
-  padding: 20px 60px;
-
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(8px);
+  padding: 10px 8%;
+  background: #fff;
 }
 
-/* LOGO */
+/* LEFT MENU */
+.nav-menu {
+  display: flex;
+  gap: 26px;
+  list-style: none;
+  font-size: 14px;
+}
+
+.nav-menu li {
+  cursor: pointer;
+  color: #333;
+}
+
+/* CENTER LOGO */
 .nav-logo {
+  position: absolute;              /* MAGIC LINE */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px;
   font-weight: 600;
   letter-spacing: 2px;
-  font-size: 18px;
+  color: #000;
 }
 
-/* LINKS */
-.nav-links {
-  list-style: none;       
-  display: flex;           
-  gap: 30px;
-}
-
-.nav-links li {
-  cursor: pointer;
-  font-size: 14px;
-  color: #222;
-}
-
-/* BUTTON */
+/* RIGHT BUTTON */
 .nav-btn {
-  background: #9c7a4e;
-  color: white;
+  margin-left: auto;               /* pushes button to right */
+  background: #a67c52;
+  color: #fff;
   border: none;
-  padding: 10px 18px;
-  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 13px;
+  border-radius: 4px;
   cursor: pointer;
-  font-size: 14px;
 }

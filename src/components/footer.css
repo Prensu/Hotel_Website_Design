@@ -1,0 +1,116 @@
+.footer {
+  background: #6b4a3a;
+  color: #f1eae6;
+  padding: 60px 80px 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 2fr;
+  gap: 40px;
+}
+
+.logo {
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #e0d6cf;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.socials span {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #e0d6cf;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.footer-links h4,
+.footer-newsletter h4 {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.footer-links ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+
+.footer-links li {
+  font-size: 14px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #e0d6cf;
+}
+
+.footer-links li:hover {
+  text-decoration: underline;
+}
+
+.footer-newsletter p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #e0d6cf;
+  margin-bottom: 15px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid #e0d6cf;
+  color: #fff;
+  outline: none;
+}
+
+.newsletter-form input::placeholder {
+  color: #d2c3ba;
+}
+
+.newsletter-form button {
+  padding: 10px 20px;
+  background: #f1eae6;
+  color: #6b4a3a;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 40px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.footer-bottom select {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #e0d6cf;
+  padding: 6px 10px;
+}
