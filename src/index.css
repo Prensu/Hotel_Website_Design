@@ -18,12 +18,18 @@ body {
 
 
 body {
-  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+  font-family:"Georgia",serif;
   background-color: #000;
   overflow-x: hidden;
 }
 
+h1,h2,h3{
+  font-family: "Georgia",serif;
+}
+
+p,a{
+  font-family: "Poppins";
+}
 /* =========================
    ROOT (VERY IMPORTANT)
 ========================= */

@@ -10,6 +10,7 @@
   color: #6f4e37;
   margin-bottom: 8px;
   letter-spacing: 1px;
+  font-family:"Georgia",serif;
 }
 
 .rooms-subtitle {
@@ -99,7 +100,7 @@
   background: #5a3f2c;
 }
 
-/* Dots */
+
 .rooms-dots {
   margin-top: 40px;
 }
@@ -117,7 +118,7 @@
   background: #6f4e37;
 }
 
-/* Responsive */
+
 @media (max-width: 1000px) {
   .rooms-grid {
     grid-template-columns: 1fr;

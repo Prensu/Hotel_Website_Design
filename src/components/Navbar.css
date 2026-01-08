@@ -1,39 +1,52 @@
 .navbar {
-  position: relative;              /* REQUIRED for absolute centering */
+  position: relative;          
   display: flex;
   align-items: center;
-  padding: 10px 8%;
-  background: #fff;
+  padding: 14px 8%;
+  background: #f9f6f1;
 }
 
-/* LEFT MENU */
+.nav-logo {
+  color: #6b4e3d;
+}
+
+
 .nav-menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  gap: 26px;
+  gap: 28px;
   list-style: none;
   font-size: 14px;
 }
 
 .nav-menu li {
   cursor: pointer;
-  color: #333;
+  color: #6b4e3d;
+  position: relative;
 }
 
-/* CENTER LOGO */
-.nav-logo {
-  position: absolute;              /* MAGIC LINE */
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 22px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  color: #000;
+
+.nav-menu li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #6b4e3d;
+  bottom: -6px;
+  left: 0;
+  transition: 0.3s;
 }
 
-/* RIGHT BUTTON */
+.nav-menu li:hover::after {
+  width: 100%;
+}
+
+
 .nav-btn {
-  margin-left: auto;               /* pushes button to right */
-  background: #a67c52;
+  margin-left: auto;
+  background: #6b4e3d;
   color: #fff;
   border: none;
   padding: 8px 18px;

@@ -55,7 +55,7 @@ export default function Footer()
 
                 <div className="newsletter-form">
                     <input type="email" placeholder="please enter your email" />
-                    <button>Susribe</button>
+                    <button>Suscribe</button>
                 </div>
                 </div>
             </div>
