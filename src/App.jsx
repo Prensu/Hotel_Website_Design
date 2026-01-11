@@ -1,26 +1,29 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import OurStory from "./components/OurStory";
-import Rooms from "./components/Rooms";
-import Dining from "./components/Dining";
-import SpaWellness from "./components/SpaWellness";
-import ExclusiveAmenities from "./components/ExclusiveAmenities";
-import Testimonials from "./components/Testimonials";
-import Footer from "./components/Footer";
-function App()
-{
-  return(
+import { Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
+
+import Home from "./pages/Home";
+import OurStoryPage from "./pages/ourStory";
+import Room from "./pages/Room";
+import Blog from "./pages/Blog";
+import Contact from "./pages/Contact";
+
+function App() {
+  return (
     <>
-    <Navbar />
-    <Hero />
-   <OurStory />
-   <Rooms />
-   <Dining />
-   <SpaWellness />
-   <ExclusiveAmenities />
-   <Testimonials />
-   <Footer />
-     </>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/our-story" element={<OurStoryPage />} />
+        <Route path="/rooms" element={<Room />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+
+      <Footer />
+    </>
   );
 }
 

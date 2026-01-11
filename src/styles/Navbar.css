@@ -1,0 +1,135 @@
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 16px 8%;
+  background: #f9f6f1;
+  border-bottom: 1px solid #e7e3dd;
+  position: relative;
+  z-index: 1000;
+}
+
+/* LEFT */
+.nav-left {
+  flex: 1;
+}
+
+.nav-logo {
+  font-size: 20px;
+  font-weight: 600;
+  color: #6b4e3d;
+}
+
+/* CENTER MENU */
+.nav-menu {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  list-style: none;
+}
+
+/* IMPORTANT: style links, not li */
+.nav-menu li {
+  position: relative;
+}
+
+.nav-menu a {
+  font-size: 14px;
+  color: #b7b1a8;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+/* hover + active text */
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: #6b4e3d;
+}
+
+/* underline animation */
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #6b4e3d;
+  bottom: -6px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+  width: 100%;
+}
+
+/* RIGHT */
+.nav-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* BUTTON */
+.nav-btn {
+  background: #7a4a32;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 13px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  margin-left: 16px;
+  cursor: pointer;
+  color: #6b4e3d;
+}
+
+/* MOBILE BUTTON */
+.mobile-btn {
+  display: none;
+}
+
+/* ------------------ MOBILE ------------------ */
+@media (max-width: 768px) {
+  .nav-menu {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background: #f9f6f1;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    display: none;
+
+    /* reset desktop flex */
+    flex: none;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .desktop-btn {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .mobile-btn {
+    display: block;
+  }
+}

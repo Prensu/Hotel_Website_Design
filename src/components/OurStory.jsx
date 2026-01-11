@@ -1,4 +1,4 @@
-import "./OurStory.css";
+import "../styles/OurStory.css";
 import storyImg from "../assets/OurStory.jpg";
 
 const OurStory = () => {

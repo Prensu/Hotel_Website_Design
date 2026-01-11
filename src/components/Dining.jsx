@@ -1,4 +1,4 @@
-import "./Dining.css";
+import "../styles/Dining.css";
 import diningImg from "../assets/dining.jpg";
 
 const Dining = () => {

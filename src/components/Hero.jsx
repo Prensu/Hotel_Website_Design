@@ -1,5 +1,4 @@
-
-import "./Hero.css";
+import "../styles/Hero.css";
 import HeroImg from "../assets/hero.jpg";
 
 export default function Hero() {
@@ -10,7 +9,8 @@ export default function Hero() {
     >
       <div className="overlay">
         <h1>
-          A HAVEN OF OPULENCE <br /> AND TRANQUILITY
+          A HAVEN OF OPULENCE
+          <span>AND TRANQUILITY</span>
         </h1>
 
         <p>

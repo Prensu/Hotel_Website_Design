@@ -1,4 +1,4 @@
-import "./ExclusiveAmenities.css";
+import "../styles/ExclusiveAmenities.css";
 import { WavesLadder } from 'lucide-react';
 import { Flame } from 'lucide-react';
 import { HandPlatter } from 'lucide-react';

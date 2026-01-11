@@ -1,4 +1,4 @@
-import "./SpaWellness.css";
+import "../styles/SpaWellness.css";
 import spaImage from "../assets/spa.jpg";
 
 const SpaWellness = () => {
