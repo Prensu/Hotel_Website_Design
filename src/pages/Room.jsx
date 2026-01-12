@@ -1,79 +1,85 @@
-import './Rooms.css';
+import "./Rooms.css";
+import room1 from "../assets/rooms/room1.jpg";
+import room2 from "../assets/rooms/room2.jpg";
+import room3 from "../assets/rooms/room3.jpg";
+import room4 from "../assets/rooms/room4.jpg";
+import heroImg from "../assets/dwarika.jpg";
 
-// Import images from assets
-import room1 from '../assets/rooms/room1.jpg';
-import room2 from '../assets/rooms/room2.jpg';
-import room3 from '../assets/rooms/room3.jpg';
-import room4 from '../assets/rooms/room4.jpg';
-import room5 from '../assets/rooms/room5.jpg';
-import room6 from '../assets/rooms/room6.jpg';
-
-const rooms = [
-  {
-    title: 'Delux Room',
-    price: 'Price from $330.0 Night',
-    image: room1,
-  },
-  {
-    title: 'Modern Room',
-    price: 'Price from $330.0 Night',
-    image: room2,
-  },
-  {
-    title: 'Cozy Room',
-    price: 'Price from $330.0 Night',
-    image: room3,
-  },
-  {
-    title: 'Family Suit',
-    price: 'Price from $330.0 Night',
-    image: room4,
-  },
-  {
-    title: 'Grand Luxury Room',
-    price: 'Price from $330.0 Night',
-    image: room5,
-  },
-  {
-    title: 'Sea View Room',
-    price: 'Price from $330.0 Night',
-    image: room6,
-  }
-];
-
-const Rooms = () => {
+const Room = () => {
   return (
-    <section className="rooms">
-      {/* Header */}
-      <div className="rooms-header">
-        <div className="rooms-header-left">
-          <span className="rooms-tag">Room / Suite</span>
-          <h2>Elegantly Curated Rooms</h2>
+    <>
+   
+      <section
+        className="room-hero"
+        style={{ backgroundImage: `url(${heroImg})` }}
+      >
+        <div className="room-hero-overlay">
+          <h1>Living at The Dwarika’s</h1>
         </div>
+      </section>
 
-        <div className="rooms-header-right">
+      <section className="room-intro">
+        <div className="room-container">
+          <h2>
+            A Unique Experience of Living in the Essence of Traditional <br />
+            Nepali Ambience
+          </h2>
+
           <p>
-            Every room is designed with comfort, style, and sophistication
-            to give you a truly luxurious stay.
+            With 76 meticulously designed rooms and suites, the Dwarika’s offers a
+            unique experience as a serene retreat amid Kathmandu’s vibrant city.
+            Each room is spacious and has been individually designed to blend
+            intricate Nepali design motifs with a contemporary lifestyle
+            interspersed with original artworks.
+            <br />
+            <br />
+            Rooms and suites capture the Himalayan essence without compromising
+            on luxury reflecting its commitment to heritage and sustainability.
+            The flooring is adorned with handmade terracotta tiles, the
+            upholsteries are handwoven and locally produced, and the linen is
+            organic.
           </p>
-          <button className="rooms-btn">View All Rooms →</button>
         </div>
-      </div>
+      </section>
 
-      {/* Rooms Grid */}
-      <div className="rooms-grid">
-        {rooms.map((room, index) => (
-          <div className="room-card" key={index}>
-            <img src={room.image} alt={room.title} />
-            <div className="room-info">
-              <h4>{room.title}</h4>
-              <span>{room.price}</span>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
+      <section className="room-listing">
+        <div className="room-list-grid">
+          <RoomCard
+            img={room1}
+            title="Heritage Deluxe Room"
+            price="$ 285.26"
+            text="Step into a world of timeless elegance with our Heritage Deluxe Rooms, where Nepal’s rich artistic traditions come to life. Thoughtfully designed with intricately carved woodwork and handwoven textiles."
+          />
+
+          <RoomCard
+            img={room2}
+            title="Junior Suite"
+            price="$ 387.30"
+            text="Experience the grandeur of Nepal’s rich heritage in our Junior Suites, where artistry and comfort come together in a timeless embrace."
+          />
+        </div>
+      </section>
+    </>
   );
 };
 
-export default Rooms;
+const RoomCard = ({ img, title, text, price }) => (
+  <div className="room-item">
+    <img src={img} alt={title} />
+    <h3>{title}</h3>
+    <p>{text}</p>
+
+    <a href="#" className="read-more">
+      Read more →
+    </a>
+
+    <div className="room-rate">
+      <span>Rates from</span>
+      <strong>{price}</strong>
+    </div>
+
+    <button className="book-btn">BOOK NOW</button>
+  </div>
+);
+
+export default Room;

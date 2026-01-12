@@ -1,8 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
-
 import Home from "./pages/Home";
 import OurStoryPage from "./pages/ourStory";
 import Room from "./pages/Room";
@@ -13,7 +11,6 @@ function App() {
   return (
     <>
       <Navbar />
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/our-story" element={<OurStoryPage />} />
