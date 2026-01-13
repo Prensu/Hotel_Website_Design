@@ -1,6 +1,6 @@
 import "../styles/SpaWellness.css";
 import spaImage from "../assets/spa.jpg";
-
+import CustomButton from "./ui/customButton";
 const SpaWellness = () => {
   return (
     
@@ -47,7 +47,12 @@ const SpaWellness = () => {
             </li>
           </ul>
 
-          <button className="spa-button">Explore Our Menus →</button>
+          <CustomButton title="Explore →" variant="outline" />
+          <CustomButton title="Explore →" />
+          <CustomButton title="Explore →" variant="light"/>
+          <CustomButton title="Explore →" />
+          <CustomButton title="Explore →" />
+          <CustomButton title="Explore →" variant="outline" />
         </div>
 
         {/* RIGHT IMAGE */}

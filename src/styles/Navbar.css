@@ -1,15 +1,44 @@
-/* NAVBAR */
+/* ================================
+   BASE NAVBAR (STICKY)
+================================ */
 .navbar {
   display: flex;
   align-items: center;
-  padding: 16px 8%;
-  background: #f9f6f1;
-  border-bottom: 1px solid #e7e3dd;
-  position: relative;
+  padding: 18px 8%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
+
+  transition: 
+    background 0.4s ease,
+    box-shadow 0.4s ease,
+    border 0.4s ease,
+    color 0.3s ease;
 }
 
-/* LEFT */
+/* ================================
+   NAVBAR STATES
+================================ */
+
+/* TRANSPARENT (TOP / HERO) */
+.navbar--transparent {
+  background: transparent;
+  border-bottom: none;
+  box-shadow: none;
+}
+
+/* SCROLLED (SOLID) */
+.navbar--scrolled {
+  background: #f9f6f1;
+  border-bottom: 1px solid #e7e3dd;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ================================
+   LEFT
+================================ */
 .nav-left {
   flex: 1;
 }
@@ -17,10 +46,12 @@
 .nav-logo {
   font-size: 20px;
   font-weight: 600;
-  color: #6b4e3d;
+  letter-spacing: 1px;
 }
 
-/* CENTER MENU */
+/* ================================
+   CENTER MENU
+================================ */
 .nav-menu {
   flex: 2;
   display: flex;
@@ -29,34 +60,24 @@
   list-style: none;
 }
 
-/* IMPORTANT: style links, not li */
 .nav-menu li {
   position: relative;
 }
 
 .nav-menu a {
   font-size: 14px;
-  color: #b7b1a8;
-  cursor: pointer;
   text-decoration: none;
-  position: relative;
+  cursor: pointer;
   padding-bottom: 4px;
   transition: color 0.3s ease;
 }
 
-/* hover + active text */
-.nav-menu a:hover,
-.nav-menu a.active {
-  color: #6b4e3d;
-}
-
-/* underline animation */
+/* underline */
 .nav-menu a::after {
   content: "";
   position: absolute;
   width: 0;
   height: 2px;
-  background: #6b4e3d;
   bottom: -6px;
   left: 0;
   transition: width 0.3s ease;
@@ -67,7 +88,9 @@
   width: 100%;
 }
 
-/* RIGHT */
+/* ================================
+   RIGHT
+================================ */
 .nav-right {
   flex: 1;
   display: flex;
@@ -75,35 +98,74 @@
   align-items: center;
 }
 
-/* BUTTON */
+/* ================================
+   BUTTON
+================================ */
 .nav-btn {
-  background: #7a4a32;
-  color: #fff;
   border: none;
   padding: 10px 20px;
   font-size: 13px;
   border-radius: 6px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-/* HAMBURGER */
+/* ================================
+   HAMBURGER
+================================ */
 .hamburger {
   display: none;
   margin-left: 16px;
   cursor: pointer;
+}
+
+/* ================================
+   TRANSPARENT COLORS
+================================ */
+.navbar--transparent .nav-logo,
+.navbar--transparent .nav-menu a,
+.navbar--transparent .hamburger {
+  color: #ffffff;
+}
+
+.navbar--transparent .nav-menu a::after {
+  background: #ffffff;
+}
+
+.navbar--transparent .nav-btn {
+  background: rgba(255, 255, 255, 0.9);
+  color: #3f2e25;
+}
+
+/* ================================
+   SCROLLED COLORS
+================================ */
+.navbar--scrolled .nav-logo,
+.navbar--scrolled .nav-menu a,
+.navbar--scrolled .hamburger {
   color: #6b4e3d;
 }
 
-/* MOBILE BUTTON */
+.navbar--scrolled .nav-menu a::after {
+  background: #6b4e3d;
+}
+
+.navbar--scrolled .nav-btn {
+  background: #7a4a32;
+  color: #ffffff;
+}
+
+/* ================================
+   MOBILE MENU
+================================ */
 .mobile-btn {
   display: none;
 }
 
-/* ------------------ MOBILE ------------------ */
 @media (max-width: 768px) {
   .nav-menu {
     position: absolute;
-    top: 64px;
+    top: 70px;
     left: 0;
     width: 100%;
     background: #f9f6f1;
@@ -112,8 +174,6 @@
     gap: 20px;
     padding: 20px 0;
     display: none;
-
-    /* reset desktop flex */
     flex: none;
   }
 
@@ -131,5 +191,14 @@
 
   .mobile-btn {
     display: block;
+  }
+
+  /* Mobile menu colors */
+  .nav-menu a {
+    color: #6b4e3d;
+  }
+
+  .nav-menu a::after {
+    background: #6b4e3d;
   }
 }
