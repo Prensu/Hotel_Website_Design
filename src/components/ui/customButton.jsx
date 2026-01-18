@@ -1,7 +1,7 @@
 import React from "react";
-import "./CustomButton.css";
+import "./customButton.css";
 
-function CustomButton({ title, variant = "primary", onClick }) {
+function customButton({ title, variant = "primary", onClick }) {
   return (
     <button
       className={`custom-btn custom-btn--${variant}`}
@@ -12,4 +12,4 @@ function CustomButton({ title, variant = "primary", onClick }) {
   );
 }
 
-export default CustomButton;
+export default customButton;

@@ -6,6 +6,8 @@ import OurStoryPage from "./pages/ourStory";
 import Room from "./pages/Room";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import SingleRoom from "./pages/SingleRoom";
+
 
 function App() {
   return (
@@ -15,7 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/our-story" element={<OurStoryPage />} />
         <Route path="/rooms" element={<Room />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/rooms/:slug" element={<SingleRoom />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
 
